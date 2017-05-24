@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zBP-KG-OYP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cardio Diary-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Cardio Diary" id="BYZ-38-t0r" customClass="HomeViewController" customModule="CardioDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ng9-uY-Jum">
+                                <rect key="frame" x="113" y="109" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="gos-fa-K5E"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="6" minY="4" maxX="6" maxY="4"/>
+                                <state key="normal" title="Start Workout">
+                                    <color key="titleColor" white="0.20184151785714285" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gWG-ff-Jog" kind="presentation" id="xch-6h-5fi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-Rb-h8s">
+                                <rect key="frame" x="112" y="152" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cbe-do-vHn"/>
+                                    <constraint firstAttribute="width" constant="150" id="jM4-zu-cJH"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                                <state key="normal" title="Cardio History">
+                                    <color key="titleColor" white="0.20184151785714285" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Gh-VD-i6t" kind="show" id="KDB-y4-q9P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apF-uH-1nY">
+                                <rect key="frame" x="112.5" y="195" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="aJS-vg-JXM"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                                <state key="normal" title="Goals">
+                                    <color key="titleColor" white="0.20184151785714285" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bDf-GX-KlS" kind="show" id="Zh9-Fb-vi1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are # hrs from your goal. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2j-54-zUp">
+                                <rect key="frame" x="30" y="372.5" width="315" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="goals"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.2031156994047619" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi0-RT-86L">
+                                <rect key="frame" x="146.5" y="268" width="83" height="23.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="welcome"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last workout was:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5s4-Gc-v8J">
+                                <rect key="frame" x="30" y="321.5" width="315" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="workout"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.2031156994047619" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏃🏼‍♀️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZB-uq-art">
+                                <rect key="frame" x="133.5" y="527.5" width="108" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SZB-uq-art" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Drv-1k-KTk"/>
+                            <constraint firstItem="ng9-uY-Jum" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="FWJ-zb-aks"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c2j-54-zUp" secondAttribute="trailing" constant="14" id="Gm5-D6-R68"/>
+                            <constraint firstItem="LS2-Rb-h8s" firstAttribute="top" secondItem="ng9-uY-Jum" secondAttribute="bottom" constant="13" id="IW5-Yi-jFQ"/>
+                            <constraint firstItem="apF-uH-1nY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ibd-Vx-Lwb"/>
+                            <constraint firstItem="c2j-54-zUp" firstAttribute="top" secondItem="5s4-Gc-v8J" secondAttribute="bottom" constant="30" id="Jma-uk-ibA"/>
+                            <constraint firstItem="5s4-Gc-v8J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="NU1-Y5-SjE"/>
+                            <constraint firstItem="apF-uH-1nY" firstAttribute="top" secondItem="LS2-Rb-h8s" secondAttribute="bottom" constant="13" id="Qqk-wX-QdF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5s4-Gc-v8J" secondAttribute="trailing" constant="14" id="R0p-1d-faD"/>
+                            <constraint firstItem="5s4-Gc-v8J" firstAttribute="top" secondItem="Zi0-RT-86L" secondAttribute="bottom" constant="30" id="RPH-vr-T8T"/>
+                            <constraint firstItem="LS2-Rb-h8s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UdY-EU-yXb"/>
+                            <constraint firstItem="Zi0-RT-86L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dXI-2t-9kK"/>
+                            <constraint firstItem="c2j-54-zUp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="eNb-sq-0nv"/>
+                            <constraint firstItem="Zi0-RT-86L" firstAttribute="top" secondItem="apF-uH-1nY" secondAttribute="bottom" constant="43" id="ekp-GD-sFO"/>
+                            <constraint firstItem="ng9-uY-Jum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSK-wQ-yKr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SZB-uq-art" secondAttribute="bottom" constant="20" id="zql-AT-CGb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cardio Diary" id="sJv-SO-o0P"/>
+                    <connections>
+                        <outlet property="cardioHistoryButton" destination="LS2-Rb-h8s" id="b5u-VO-xe9"/>
+                        <outlet property="goalStatusLabel" destination="c2j-54-zUp" id="Z03-LV-oa6"/>
+                        <outlet property="goalsButton" destination="apF-uH-1nY" id="hgi-1A-Uh9"/>
+                        <outlet property="lastWorkout" destination="5s4-Gc-v8J" id="JN1-ky-M1X"/>
+                        <outlet property="startCardioButton" destination="ng9-uY-Jum" id="Agh-v5-lwu"/>
+                        <outlet property="welcomeLabel" destination="Zi0-RT-86L" id="ydo-Vp-gPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="fjU-ml-On0">
+            <objects>
+                <tableViewController title="History" id="0Gh-VD-i6t" customClass="HistoryTableViewController" customModule="CardioDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eYJ-JR-ILP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historycell" textLabel="JjJ-Kn-bId" detailTextLabel="Pqt-ee-SwC" style="IBUITableViewCellStyleValue1" id="JLr-lO-4DX">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JLr-lO-4DX" id="0GZ-Uv-Qa9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JjJ-Kn-bId">
+                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pqt-ee-SwC">
+                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4Oa-0z-Wrj" kind="show" id="lE5-R6-JFY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0Gh-VD-i6t" id="4Gn-Y7-SMv"/>
+                            <outlet property="delegate" destination="0Gh-VD-i6t" id="m34-EH-L9v"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQe-En-3vD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759" y="137"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="GUd-L6-7A9">
+            <objects>
+                <viewController title="Details" id="4Oa-0z-Wrj" customClass="DetailsViewController" customModule="CardioDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yPx-cm-iGb"/>
+                        <viewControllerLayoutGuide type="bottom" id="H1v-jS-2QP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f4N-B9-TQk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-7n-kdv">
+                                <rect key="frame" x="162" y="84" width="52.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV2-Ur-nbu">
+                                <rect key="frame" x="169.5" y="130" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.20294828869047618" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e97-TR-6N8">
+                                <rect key="frame" x="154.5" y="173" width="66" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="duration"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.20294828869047618" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="A6Z-09-1fB">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heart Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F18-Os-gy0">
+                                <rect key="frame" x="146" y="259" width="83" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="heartRate"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.20294828869047618" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSu-6R-6se">
+                                <rect key="frame" x="163" y="216" width="50" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="speed"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.20294828869047618" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F18-Os-gy0" firstAttribute="centerX" secondItem="f4N-B9-TQk" secondAttribute="centerX" id="3uv-Jd-wPm"/>
+                            <constraint firstItem="eV2-Ur-nbu" firstAttribute="centerX" secondItem="f4N-B9-TQk" secondAttribute="centerX" id="9uw-Sx-tRA"/>
+                            <constraint firstAttribute="trailing" secondItem="A6Z-09-1fB" secondAttribute="trailing" id="AhT-fr-f1l"/>
+                            <constraint firstItem="NSu-6R-6se" firstAttribute="top" secondItem="e97-TR-6N8" secondAttribute="bottom" constant="22" id="Jtv-4q-GOP"/>
+                            <constraint firstItem="e97-TR-6N8" firstAttribute="centerX" secondItem="f4N-B9-TQk" secondAttribute="centerX" id="PTy-Of-pIk"/>
+                            <constraint firstItem="H1v-jS-2QP" firstAttribute="top" secondItem="A6Z-09-1fB" secondAttribute="bottom" id="SdJ-xr-iTB"/>
+                            <constraint firstItem="vOO-7n-kdv" firstAttribute="centerX" secondItem="f4N-B9-TQk" secondAttribute="centerX" id="TO1-Ic-qsQ"/>
+                            <constraint firstItem="e97-TR-6N8" firstAttribute="top" secondItem="eV2-Ur-nbu" secondAttribute="bottom" constant="22" id="bEt-Cr-fCC"/>
+                            <constraint firstItem="A6Z-09-1fB" firstAttribute="height" secondItem="f4N-B9-TQk" secondAttribute="height" multiplier="0.5" id="cam-Et-Nt5"/>
+                            <constraint firstItem="NSu-6R-6se" firstAttribute="centerX" secondItem="f4N-B9-TQk" secondAttribute="centerX" id="crv-7C-8Wa"/>
+                            <constraint firstItem="eV2-Ur-nbu" firstAttribute="top" secondItem="vOO-7n-kdv" secondAttribute="bottom" constant="17" id="kaK-LX-dWX"/>
+                            <constraint firstItem="A6Z-09-1fB" firstAttribute="leading" secondItem="f4N-B9-TQk" secondAttribute="leading" id="lG2-co-f16"/>
+                            <constraint firstItem="F18-Os-gy0" firstAttribute="top" secondItem="NSu-6R-6se" secondAttribute="bottom" constant="22" id="sRD-5C-DbA"/>
+                            <constraint firstItem="vOO-7n-kdv" firstAttribute="top" secondItem="yPx-cm-iGb" secondAttribute="bottom" constant="20" id="ygg-BH-8bj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardioDate" destination="eV2-Ur-nbu" id="ZSp-m4-DhY"/>
+                        <outlet property="cardioDuration" destination="e97-TR-6N8" id="p1a-4R-ICj"/>
+                        <outlet property="cardioType" destination="vOO-7n-kdv" id="fxh-kk-7XZ"/>
+                        <outlet property="cardioTypeLabel" destination="vOO-7n-kdv" id="d1w-F6-axf"/>
+                        <outlet property="heartRatesLabel" destination="F18-Os-gy0" id="kz0-uS-lGE"/>
+                        <outlet property="mapView" destination="A6Z-09-1fB" id="fkW-qh-LgW"/>
+                        <outlet property="speedLabel" destination="NSu-6R-6se" id="qnn-hf-EwE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thd-3E-kDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="135.38230884557723"/>
+        </scene>
+        <!--Cardio Event View Controller-->
+        <scene sceneID="HGo-SC-cCa">
+            <objects>
+                <viewController id="gWG-ff-Jog" customClass="CardioEventViewController" customModule="CardioDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ccZ-4c-Z3U"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bpg-lN-ORd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="byc-z0-xvw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElZ-8N-yU1">
+                                <rect key="frame" x="112" y="185" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="qZn-dh-0qS"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                                <state key="normal" title="Start Workout">
+                                    <color key="titleColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCardio:" destination="gWG-ff-Jog" eventType="touchUpInside" id="15w-pS-bRT"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0T-zI-fn7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Done" id="T0G-cj-XYZ">
+                                        <connections>
+                                            <action selector="done:" destination="gWG-ff-Jog" id="OBN-rN-ee9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80B-E1-WbI">
+                                <rect key="frame" x="171.5" y="241" width="33.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ3-I5-GdV">
+                                <rect key="frame" x="112" y="309" width="150" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="f4L-Zc-rT0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                                <state key="normal" title="Check Heart Rate">
+                                    <color key="titleColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startHeartRateCheck:" destination="gWG-ff-Jog" eventType="touchUpInside" id="ddA-Rm-j9h"/>
+                                </connections>
+                            </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-Yx-RjV" customClass="TimerView" customModule="CardioDiary" customModuleProvider="target">
+                                <rect key="frame" x="137" y="375" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2Sr-eH-2ux"/>
+                                    <constraint firstAttribute="height" constant="100" id="LtX-Wa-z8i"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To take your heart rate, place your index and middle finger on your neck and count the beats until the circle is empty" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4R-Y0-BYO">
+                                <rect key="frame" x="78" y="510" width="220" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="M4U-Qa-Syx"/>
+                                    <constraint firstAttribute="width" constant="220" id="aSs-Bj-Dqh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZH-Ho-7ja">
+                                <rect key="frame" x="166" y="355" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CL1-Yx-RjV" firstAttribute="centerX" secondItem="byc-z0-xvw" secondAttribute="centerX" id="6pS-tK-gky"/>
+                            <constraint firstItem="p4R-Y0-BYO" firstAttribute="top" secondItem="CL1-Yx-RjV" secondAttribute="bottom" constant="35" id="FRf-aa-eaZ"/>
+                            <constraint firstAttribute="trailing" secondItem="s0T-zI-fn7" secondAttribute="trailing" id="Fj8-8y-3zu"/>
+                            <constraint firstItem="ElZ-8N-yU1" firstAttribute="centerY" secondItem="byc-z0-xvw" secondAttribute="centerY" multiplier="0.6" id="PKg-rr-PyD"/>
+                            <constraint firstItem="UJ3-I5-GdV" firstAttribute="top" secondItem="80B-E1-WbI" secondAttribute="bottom" constant="32.5" id="SXX-JF-01h"/>
+                            <constraint firstItem="s0T-zI-fn7" firstAttribute="leading" secondItem="byc-z0-xvw" secondAttribute="leading" id="SwF-fk-zUV"/>
+                            <constraint firstItem="80B-E1-WbI" firstAttribute="centerX" secondItem="byc-z0-xvw" secondAttribute="centerX" id="TRH-iX-wx7"/>
+                            <constraint firstItem="CL1-Yx-RjV" firstAttribute="top" secondItem="UJ3-I5-GdV" secondAttribute="bottom" constant="40" id="Uux-fG-vsb"/>
+                            <constraint firstItem="80B-E1-WbI" firstAttribute="top" secondItem="ElZ-8N-yU1" secondAttribute="bottom" constant="25.5" id="X3r-xo-Tdw"/>
+                            <constraint firstItem="p4R-Y0-BYO" firstAttribute="centerX" secondItem="byc-z0-xvw" secondAttribute="centerX" id="dmd-N3-77J"/>
+                            <constraint firstItem="VZH-Ho-7ja" firstAttribute="centerX" secondItem="byc-z0-xvw" secondAttribute="centerX" id="gQf-k7-F3J"/>
+                            <constraint firstItem="UJ3-I5-GdV" firstAttribute="centerX" secondItem="byc-z0-xvw" secondAttribute="centerX" id="gcI-7W-rxd"/>
+                            <constraint firstItem="ElZ-8N-yU1" firstAttribute="centerX" secondItem="byc-z0-xvw" secondAttribute="centerX" id="hZn-b5-9Sd"/>
+                            <constraint firstItem="VZH-Ho-7ja" firstAttribute="top" secondItem="UJ3-I5-GdV" secondAttribute="bottom" constant="20" id="q6z-1d-IEg"/>
+                            <constraint firstItem="s0T-zI-fn7" firstAttribute="top" secondItem="ccZ-4c-Z3U" secondAttribute="bottom" id="vtL-3g-q7R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkHeartRateButton" destination="UJ3-I5-GdV" id="luB-zK-Yui"/>
+                        <outlet property="displayHeartRate" destination="VZH-Ho-7ja" id="rPy-b0-Y9b"/>
+                        <outlet property="duration" destination="80B-E1-WbI" id="lvs-Z8-ArN"/>
+                        <outlet property="heartRateInstructions" destination="p4R-Y0-BYO" id="QoT-WQ-gz9"/>
+                        <outlet property="startButton" destination="ElZ-8N-yU1" id="sZc-9s-HEh"/>
+                        <outlet property="startWorkoutButton" destination="ElZ-8N-yU1" id="Sdg-M4-hOr"/>
+                        <outlet property="timerView" destination="CL1-Yx-RjV" id="xzM-ss-ztW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSL-a8-yBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085.5999999999999" y="820.83958020989508"/>
+        </scene>
+        <!--Goals-->
+        <scene sceneID="EM4-5t-xXT">
+            <objects>
+                <viewController title="Goals" id="bDf-GX-KlS" customClass="GoalsViewController" customModule="CardioDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k7S-Cc-EYM"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Hz-XX-s8i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Rt-2D-YaC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles per week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-Ho-9bt">
+                                <rect key="frame" x="130" y="181" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgG-sZ-t4U">
+                                <rect key="frame" x="77" y="178" width="45" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="goalEntry"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="VR8-UP-aHo"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter how many miles you would like to run this week" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-Yi-Tac">
+                                <rect key="frame" x="16" y="106" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8k-xS-s9l">
+                                <rect key="frame" x="133" y="378" width="108" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8UK-Ho-9bt" firstAttribute="centerX" secondItem="7Rt-2D-YaC" secondAttribute="centerX" id="0kM-Ks-9vs"/>
+                            <constraint firstItem="8UK-Ho-9bt" firstAttribute="leading" secondItem="SgG-sZ-t4U" secondAttribute="trailing" constant="8" id="29d-Hw-XQu"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zEp-Yi-Tac" secondAttribute="leading" id="9CG-fs-vNA"/>
+                            <constraint firstItem="zEp-Yi-Tac" firstAttribute="top" secondItem="k7S-Cc-EYM" secondAttribute="bottom" constant="42" id="AJe-Od-rsZ"/>
+                            <constraint firstItem="N8k-xS-s9l" firstAttribute="centerX" secondItem="7Rt-2D-YaC" secondAttribute="centerX" id="NiR-ov-eoR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zEp-Yi-Tac" secondAttribute="trailing" id="VMs-ml-nsP"/>
+                            <constraint firstItem="8UK-Ho-9bt" firstAttribute="top" secondItem="zEp-Yi-Tac" secondAttribute="bottom" constant="54" id="WQY-wu-Dzd"/>
+                            <constraint firstItem="N8k-xS-s9l" firstAttribute="top" secondItem="8UK-Ho-9bt" secondAttribute="bottom" constant="176" id="mR3-YF-SYn"/>
+                            <constraint firstItem="SgG-sZ-t4U" firstAttribute="baseline" secondItem="8UK-Ho-9bt" secondAttribute="baseline" id="yu2-HO-aXW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="milesPerWeekField" destination="SgG-sZ-t4U" id="htq-v5-NYX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zj-Gf-QHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752.8" y="777.66116941529242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hUR-Lu-HwC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zBP-KG-OYP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d6T-gR-Lmk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nLp-EC-IGj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOI-oW-z5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+</document>

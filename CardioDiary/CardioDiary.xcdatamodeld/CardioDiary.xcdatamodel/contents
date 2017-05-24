@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cardio" representedClassName=".Cardio" syncable="YES" codeGenerationType="category">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="duration" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="heartRate" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HeartRate" inverseName="cardio" inverseEntity="HeartRate" syncable="YES"/>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="cardio" inverseEntity="Route" syncable="YES"/>
+    </entity>
+    <entity name="HeartRate" representedClassName=".HeartRate" syncable="YES" codeGenerationType="category">
+        <attribute name="pulse" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="cardio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cardio" inverseName="heartRate" inverseEntity="Cardio" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES" codeGenerationType="category">
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="location" inverseEntity="Route" syncable="YES"/>
+    </entity>
+    <entity name="Route" representedClassName=".Route" syncable="YES" codeGenerationType="category">
+        <attribute name="miles" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="cardio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cardio" inverseName="route" inverseEntity="Cardio" syncable="YES"/>
+        <relationship name="location" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="route" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cardio" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="HeartRate" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="Route" positionX="-36" positionY="9" width="128" height="88"/>
+        <element name="Location" positionX="-27" positionY="54" width="128" height="90"/>
+    </elements>
+</model>
